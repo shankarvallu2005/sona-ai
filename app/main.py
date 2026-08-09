@@ -5,7 +5,7 @@ def load_config():
         return json.load(file)
 
 def main():
-    config = load_config
+    config = load_config()
 
     print("================================")
     print(f"Welcome to {config['assistant_name']}")
