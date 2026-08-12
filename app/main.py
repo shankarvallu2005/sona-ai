@@ -1,4 +1,5 @@
 import json
+from modules.brain.brain import think
 
 def load_config():
     with open("config/config.json", "r") as file:
@@ -29,6 +30,8 @@ def main():
     display_banner(config)
 
     startup_message()
+
+    think()
 
 
 
