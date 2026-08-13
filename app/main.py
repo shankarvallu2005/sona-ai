@@ -1,5 +1,6 @@
 import json
 from modules.brain.brain import think
+from modules.system.system import get_current_time, get_system_info
 
 def load_config():
     with open("config/config.json", "r") as file:
@@ -37,3 +38,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+current_time = get_current_time()
+system_info = get_system_info()
+
+print("Current Time :", current_time)
+print("Operating System :", system_info["operating_system"])
+print("Python Version :", system_info["python_version"])
