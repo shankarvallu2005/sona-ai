@@ -1,6 +1,7 @@
 import json
 from modules.brain.brain import think
 from modules.system.system import get_current_time, get_system_info
+from modules.commands.commands import process_command
 
 def load_config():
     with open("config/config.json", "r") as file:
@@ -26,7 +27,7 @@ def startup_message():
 
 
 def main():
-    config = load_config
+    config = load_config()
 
     display_banner(config)
 
@@ -34,14 +35,14 @@ def main():
 
     think()
 
+    while True:
+        command = input("\nYou : ")
+        response = process_command(command)
+        print(f"SONA : {response}")
+        if command.lower() == "exit":
+            break
+
 
 
 if __name__ == "__main__":
     main()
-
-current_time = get_current_time()
-system_info = get_system_info()
-
-print("Current Time :", current_time)
-print("Operating System :", system_info["operating_system"])
-print("Python Version :", system_info["python_version"])
