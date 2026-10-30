@@ -14,7 +14,7 @@ def process_command(command):
         return (
             "Available Commands:\n"
             "- time\n"
-            "- system\n"
+            "- system\n"     
             "- help\n"
             "- exit"
         )
@@ -24,6 +24,8 @@ def process_command(command):
         return "Shankar"
     elif command == "exit":
         return "Goodbye!"
+    elif command == "what is your name":
+        return "SONA"
     
     else:
         return "Sorry, I don't understand that command."

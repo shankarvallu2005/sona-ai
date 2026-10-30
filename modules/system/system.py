@@ -15,4 +15,3 @@ time = get_current_time()
 if __name__ == "__main__":
     print("Current Time :", get_current_time())
     print("System Info :", get_system_info())
-

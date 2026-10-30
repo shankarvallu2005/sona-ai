@@ -8,7 +8,7 @@ def load_config():
         return json.load(file)
 
 def display_banner(config):
-    config = load_config()
+    # config = load_config()
 
     print("="*40)
     print(f"        {config['assistant_name']}")
